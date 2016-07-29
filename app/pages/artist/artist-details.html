@@ -1,0 +1,25 @@
+<div class="artist-details-container">
+    <div class="artist-details" style="background-image: url('{{ vm.artist.picture_xl }}');">
+        <div class="darken"></div>
+        <a class="hc-btn back-btn" href="#!/." >Back</a>
+        <div class="artist-tracks-container">
+            <div class="artist-image" style="background-image: url('{{ vm.artist.picture_big }}');">
+            </div>
+
+            <div class="artist-name">
+                {{ vm.artist.name }}
+            </div>
+
+            <div class="tracks-grid-header">
+                <div class="left">
+                </div>
+                <div class="middle">Top Tracks</div>
+                <div class="right">
+                    <button ng-click="vm.addToPlaylist()" ng-class="{'disabled': vm.selectedTracks.length < 1}" class="btn btn-primary">Add to playlist <span ng-if="vm.selectedTracks.length > 0">({{vm.selectedTracks.length}})</span></button>
+                </div>
+            </div>
+
+            <div ui-grid="vm.gridOptions" ui-grid-selection class="tracks-grid"></div>
+        </div>
+    </div>
+</div>

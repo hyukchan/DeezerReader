@@ -1,0 +1,9 @@
+<nav aria-label="search-pagination">
+    <ul class="pagination">
+        <li ng-class="{ 'disabled' : currentPage === 1 }"><a ng-click="setCurrentPage(currentPage - 1)" aria-label="Previous"><span>Previous</span></a></li>
+        <li ng-class="{ 'active': currentPage === $index + 1 }" ng-repeat="i in getPageArray() track by $index">
+            <a ng-click="setCurrentPage($index + 1);">{{ $index + 1 }}</a>
+        </li>
+        <li ng-class="{ 'disabled' : currentPage === pageArray.length } "><a ng-click="setCurrentPage(currentPage + 1)" aria-label="Previous"><span>Next</span></a></li>
+    </ul>
+</nav>

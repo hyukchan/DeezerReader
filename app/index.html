@@ -11,22 +11,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css">
+  <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
-  </ul>
-
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ng-view></div>
+  <div class="container">
+    <div ng-view></div>
+  </div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+  <playlist-nav></playlist-nav>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -34,10 +35,21 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+  <script src="pages/search/search.js"></script>
+  <script src="pages/playlist/playlist.js"></script>
+  <script src="components/filters/duration.filter.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+  <script src="components/search/search.service.js"></script>
+  <script src="pages/artist/artist-details.js"></script>
+  <script src="components/artist/artist-vignette.directive.js"></script>
+  <script src="components/search/search-pagination.directive.js"></script>
+  <script src="components/playlist/playlist.service.js"></script>
+  <script src="components/playlist/playlist-nav.directive.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+  <script src="bower_components/angular-audio/app/angular.audio.js"></script>
 </body>
 </html>

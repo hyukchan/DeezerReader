@@ -1,0 +1,15 @@
+<div class="col-lg-4 col-md-6 col-xs-12">
+    <a class="artist" href="#!/artist/{{ artist.id }}">
+        <img src="{{ artist.picture_medium }}" />
+
+        <div class="description">
+            <div class="name">
+                {{ artist.name }}
+            </div>
+            <div class="like">
+                <i class="fa fa-heart"></i>
+                {{ artist.nb_fan }}
+            </div>
+        </div>
+    </a>
+</div>

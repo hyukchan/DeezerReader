@@ -1,0 +1,28 @@
+<div class="search-container">
+    <form name="searchForm" ng-submit="vm.submitForm(searchForm.$valid)">
+        <div class="search-input-container">
+            <input name="searchText" type="text" ng-model="vm.searchText" required class="form-control search-input" placeholder="Type an artist name ..."/>
+
+            <select name="nbItemsPerPage" ng-model="vm.nbItemsPerPage">
+                <option value="6" ng-selected="true">6</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
+            </select>
+
+            <button class="search-btn"><i class="fa fa-search"></i></button>
+        </div>
+    </form>
+
+    <div class="search-result-container">
+        <div ng-if="vm.artists.length > 0" ng-repeat="artist in vm.artists">
+            <artist artist="artist"></artist>
+        </div>
+
+        <div class="no-result-message" ng-if="vm.artists.length == 0">
+            No result.
+        </div>
+    </div>
+    <div class="search-pagination-container">
+        <search-pagination ng-if="vm.artists" on-page-change="vm.onPageChange(page)" nb-total-item="vm.nbTotalArtists" current-page="vm.currentPage" limit="vm.nbItemsPerPage"></search-pagination>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div ng-class="{'open': open}" ng-if="playlist.length > 0" ng-init="open = false" class="playlist-nav-container">
+    <div class="header" ng-click="open = !open">
+        Playlist
+        <i class="fa" ng-class="{'fa-caret-down': open, 'fa-caret-up': !open}"></i>
+    </div>
+
+    <ul>
+        <li ng-repeat="track in playlist">
+            <div class="playlist-track">
+                <div class="playlist-track-image">
+                    <img src="{{ track.contributors[0].picture_small }}"/>
+                    <div class="play-darken" ng-class="{'track-playing': $index === lastIndex && lastAudioPlaying}">
+                        <i class="fa" ng-click="playTrack($index)" ng-class="{'fa-play-circle': $index !== lastIndex || !lastAudioPlaying, 'fa-pause-circle': $index === lastIndex && lastAudioPlaying}"></i>
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="playlist-track-title">
+                        {{ track.title }}
+                    </div>
+                    <div class="playlist-artist-name">
+                        {{ track.artist.name }}
+                    </div>
+                </div>
+            </div>
+            <i class="fa fa-close" ng-click="removeTrack(track.id)"></i>
+        </li>
+    </ul>
+</div>
