@@ -1,6 +1,6 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "DeezerReader",
+  "description": "Angular Application to search and navigate through artists' top tracks from Deezer API.",
   "version": "0.0.0",
   "homepage": "https://github.com/angular/angular-seed",
   "license": "MIT",
