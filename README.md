@@ -1,3 +1,5 @@
+Angular Application to search and navigate through artists' top tracks from Deezer API.
+
 ## Installation & Launch ##
 
 `npm start`
