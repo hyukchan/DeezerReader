@@ -1,4 +1,4 @@
-## Installation ##
+## Installation & Launch ##
 
 `npm start`
 
